@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Pedro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #111;
+      color: #f4f4f4;
+      line-height: 1.8;
+    }
+    .section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .capa {
+      background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .textao {
+      max-width: 800px;
+      font-size: 1.2rem;
+      text-align: justify;
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .media {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .media img, .media video {
+      max-width: 300px;   /* diminuí o tamanho fixo */
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    nav {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+    nav button {
+      background: #f4f4f4;
+      color: #111;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background: #ccc;
+    }
+    /* Botão de música */
+    #btnMusica {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #f4f4f4;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <!-- Música de fundo -->
+  <audio id="musica" autoplay loop muted>
+    <source src="novoamor.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+  <button id="btnMusica">🔇</button>
+
+  <section class="section capa" id="capa">
+    <div>Pedro, isso é pra você 💙</div>
+  </section>
+
+  <section class="section" id="t1">
+    <div class="textao">
+      <h2>Minha parte 1</h2>
+      <p>Existe algo no teu sorriso que sempre despertou o melhor em mim. Quando os meus olhos encontravam os teus e os meus lábios respondiam com um sorriso, parecia que o mundo inteiro fazia sentido. O meu sorriso sempre foi mais verdadeiro quando encontrou o teu.</p>
+      <div class="media">
+        <img src="foto.amor3.jpg" alt="Foto parte 1">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t2">
+    <div class="textao">
+      <h2>Minha parte 2</h2>
+      <p>Admirar você sempre foi algo natural, como respirar. Ver você crescer, conquistar, sorrir, me dava uma paz difícil de explicar. O teu bem-estar sempre refletiu no meu. Quando te via bem, eu também ficava bem. Porque, no fundo, a tua felicidade sempre foi parte da minha.</p>
+      <div class="media">
+        <video controls>
+          <source src="video.amor4.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t3">
+    <div class="textao">
+      <h2>Parte 3</h2>
+      <p>A nossa parceria sempre foi uma das maiores forças que eu conheci. Juntos, enfrentamos dias bons, ruins e todos os meios-termos da vida. Foram tantas histórias, tantas vitórias e aprendizados. E mesmo agora, depois de tudo, eu ainda admiro profundamente a pessoa que você é. Nada pode apagar o valor do que construímos lado a lado, obrigada por isso.</p>
+      <div class="media">
+        <img src="foto.amor4.jpg" alt="Foto parte 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="t4">
+    <div class="textao">
+      <h2>Minha parte 4</h2>
+      <p>Tu foi a alma mais bonita que eu já conheci. Olhar nos teus olhos e ver um mar de sensações, possibilidades e sentimentos, ao olhar nos seus olhos sinto uma profundidade, uma calmaria como se estivesse flutuando pelo infinito do universo. Minha alma descansa ao som da sua voz, ao te ver sorrindo, ao sentir o seu abraço.
+        Você é o ser mais divino que eu já tive a oportunidade de conhecer. Você é doce, tem um coração enorme, eu te conheço o suficiente, Pedro... pra poder dizer que você foi e é a alma mais bonita que a minha alma já conheceu.
+        Tem muitas coisas que eu jamais falei, jamais me abri sobre... você não imagina o quão quentinho fica o meu coração ao ver o seu sorriso, ao ver você sorrindo.
+        Você definitivamente é o primeiro cara que eu dedico páginas, músicas, faço presentes à mão, dou presentes cheios de significados e com a sua cara, porque eu te conheço o suficiente para saber exatamente o que dar a você, e poder arrancar um sorriso seu já me faz ganhar o dia. Obrigada por tanto, Pedro.</p>
+      <div class="media">
+        <img src="foto.amor1.jpg" alt="Foto parte 4">
+      </div>
+    </div>
+  </section>
+
+  <nav>
+    <button onclick="scrollToSection('capa')">Início</button>
+    <button onclick="scrollToSection('t1')">1</button>
+    <button onclick="scrollToSection('t2')">2</button>
+    <button onclick="scrollToSection('t3')">3</button>
+    <button onclick="scrollToSection('t4')">4</button>
+  </nav>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Controle de música
+    const musica = document.getElementById("musica");
+    const btnMusica = document.getElementById("btnMusica");
+
+    btnMusica.addEventListener("click", () => {
+      if (musica.muted) {
+        musica.muted = false;
+        musica.play();
+        btnMusica.textContent = "🔊";
+      } else {
+        musica.muted = true;
+        btnMusica.textContent = "🔇";
+      }
+    });
+  </script>
+</body>
+</html>
